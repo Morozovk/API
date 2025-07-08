@@ -1,2 +1,4 @@
-package api;public class TestBase {
+package api;
+
+public class TestBase {
 }

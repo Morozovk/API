@@ -36,7 +36,7 @@ public class Users extends TestBase {
 
             UserBodyModel firstUser = response.getData().get(0);
             assertNotNull(firstUser.getId());
-            assertTrue(firstUser.getEmail().endsWith("@reqres.in"),"Email должен оканчиваться на @reqres.in");
+            assertTrue(firstUser.getEmail().endsWith("@reqres.in"), "Email должен оканчиваться на @reqres.in");
             assertNotNull(firstUser.getFirst_name());
             assertNotNull(firstUser.getLast_name());
             assertTrue(firstUser.getAvatar().endsWith(firstUser.getId() + "-image.jpg"),
@@ -94,10 +94,11 @@ public class Users extends TestBase {
 
             UserBodyModel firstUser = response.getData().get(0);
             assertNotNull(firstUser.getId());
-            assertTrue(firstUser.getEmail().endsWith("@reqres.in"),"Email должен оканчиваться на @reqres.in");
+            assertTrue(firstUser.getEmail().endsWith("@reqres.in"), "Email должен оканчиваться на @reqres.in");
             assertNotNull(firstUser.getFirst_name());
             assertNotNull(firstUser.getLast_name());
             assertTrue(firstUser.getAvatar().endsWith(firstUser.getId() + "-image.jpg"),
                     "Изображениедолжно иметь название -image и быть в формате jpg");
         });
+    }
 }

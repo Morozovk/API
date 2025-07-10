@@ -29,7 +29,7 @@
     <a href="https://gradle.org/" target="_blank"><img align="center" src="https://github.com/Morozovk/Api/blob/master/media/gradle-logo.svg" width="70" height="70"></a>
     <a href="https://docs.qameta.io/allure/" target="_blank"><img align="center" src="https://github.com/Morozovk/Api/blob/master/media/allure-report-logo.svg" width="70" height="70"></a>
     <a href="https://www.jenkins.io/" target="_blank"><img align="center" src="https://github.com/Morozovk/Api/blob/master/media/jenkins-logo.svg" width="70" height="70"></a>
-    <a href="https://rest-assured.io" target="_blank"><img align="center" src="https://github.com/Morozovk/Api/blob/master/media/rest-assured.png" width="70" height="70"></a>
+    <a href="https://rest-assured.io" target="_blank"><img align="center" src="https://github.com/Morozovk/Api/blob/master/media/rest_assured.png" width="70" height="70"></a>
 </p>
 
 ---

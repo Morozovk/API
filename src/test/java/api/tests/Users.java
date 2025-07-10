@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static api.spec.BaseSpec.baseResponseSpec;
 import static api.spec.BaseSpec.requestBaseSpec;
+import static api.tests.TestData.apiKey;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;

@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import static api.spec.BaseSpec.baseResponseSpec;
 import static api.spec.BaseSpec.requestBaseSpec;
+import static api.tests.TestData.*;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,7 +20,7 @@ public class Registration extends TestBase {
     @DisplayName("Регистрация пользователя")
     @Test
     void registerSuccessfulTest() {
-        RegisterRequestBodyModel registerData = new RegisterRequestBodyModel(email, password);
+        RegisterRequestBodyModel registerData = new RegisterRequestBodyModel(EMAIL, PASSWORD);
 
         RegisterResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -45,7 +46,7 @@ public class Registration extends TestBase {
     @DisplayName("Регистрация с некорректным email")
     @Test
     void registerUnSuccessfulNotCorrectEmailTest() {
-        RegisterRequestBodyModel registerData = new RegisterRequestBodyModel("1234", password);
+        RegisterRequestBodyModel registerData = new RegisterRequestBodyModel("1234", PASSWORD);
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -68,7 +69,7 @@ public class Registration extends TestBase {
     @DisplayName("Регистрация без обязательного поля email")
     @Test
     void registerUnSuccessfulNotEmailTest() {
-        RegisterRequestBodyModel registerData = new RegisterRequestBodyModel("", password);
+        RegisterRequestBodyModel registerData = new RegisterRequestBodyModel("", PASSWORD);
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -91,7 +92,7 @@ public class Registration extends TestBase {
     @DisplayName("Регистрация без обязательного поля password")
     @Test
     void registerUnSuccessfulNotPasswordTest() {
-        RegisterRequestBodyModel registerData = new RegisterRequestBodyModel(email, "");
+        RegisterRequestBodyModel registerData = new RegisterRequestBodyModel(EMAIL, "");
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)

@@ -41,6 +41,9 @@ dependencies {
 
 tasks.withType(Test) {
     useJUnitPlatform()
+    systemProperty "EMAIL", System.getProperty("EMAIL", "")
+    systemProperty "PASSWORD", System.getProperty("PASSWORD", "")
+    systemProperties (System.getProperties())
 
     testLogging {
         lifecycle {
@@ -50,8 +53,26 @@ tasks.withType(Test) {
     }
 }
 
-task Smoke_test(type: Test) {
+task LogIn_test(type: Test) {
     useJUnitPlatform {
-        includeTags("Smoke")
+        includeTags("LogIn")
+    }
+}
+
+task Registration_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("Registration")
+    }
+}
+
+task UserCard_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("UserCard")
+    }
+}
+
+task Users_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("Users")
     }
 }

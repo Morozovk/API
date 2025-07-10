@@ -5,12 +5,6 @@ import org.junit.jupiter.api.BeforeAll;
 
 public class TestBase {
 
-    String apiKey = "reqres-free-v1";
-    String email = "eve.holt@reqres.in";
-    String password = "cityslicka";
-    String name = "morpheus";
-    String job = "leader";
-
     @BeforeAll
     public static void setUp() {
         RestAssured.baseURI = "https://reqres.in";

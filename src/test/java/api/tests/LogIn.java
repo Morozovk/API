@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import static api.spec.BaseSpec.baseResponseSpec;
 import static api.spec.BaseSpec.requestBaseSpec;
+import static api.tests.TestData.*;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,7 +21,7 @@ public class LogIn extends TestBase {
     @DisplayName("Авторизация с валидными данными")
     @Test
     void loginSuccessfulTest() {
-        LogInRequestBodyModel authData = new LogInRequestBodyModel(email,password);
+        LogInRequestBodyModel authData = new LogInRequestBodyModel(EMAIL,PASSWORD);
 
         LogInResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -44,7 +45,7 @@ public class LogIn extends TestBase {
     @DisplayName("Попытка авторизации без пароля")
     @Test
     void loginUnSuccessfulNotPasswordTest() {
-        LogInRequestBodyModel authData = new LogInRequestBodyModel(email,"");
+        LogInRequestBodyModel authData = new LogInRequestBodyModel(EMAIL,"");
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -67,7 +68,7 @@ public class LogIn extends TestBase {
     @DisplayName("Попытка авторизации без email")
     @Test
     void loginUnSuccessfulNotEmailTest() {
-        LogInRequestBodyModel authData = new LogInRequestBodyModel("", password);
+        LogInRequestBodyModel authData = new LogInRequestBodyModel("", PASSWORD);
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -90,7 +91,7 @@ public class LogIn extends TestBase {
     @DisplayName("Попытка авторизации с некорректным email")
     @Test
     void loginUnSuccessfulNotCorrectEmailTest() {
-        LogInRequestBodyModel authData = new LogInRequestBodyModel("1234", password);
+        LogInRequestBodyModel authData = new LogInRequestBodyModel("1234", PASSWORD);
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -114,7 +115,7 @@ public class LogIn extends TestBase {
     @Disabled ("В авторизации баг, можно ввести любой пароль")
     @Test
     void loginUnSuccessfulNotCorrectPasswordTest() {
-        LogInRequestBodyModel authData = new LogInRequestBodyModel(email, "1234");
+        LogInRequestBodyModel authData = new LogInRequestBodyModel(EMAIL, "1234");
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)

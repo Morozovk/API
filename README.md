@@ -43,7 +43,7 @@
 ---
 
 <a id="jenkins"></a>
-### Сборка в [Jenkins]((https://jenkins.autotests.cloud/view/034/job/034-Morozovk98-API/)
+### Сборка в [Jenkins](https://jenkins.autotests.cloud/view/034/job/034-Morozovk98-API/)
 
 - Реалиована джоба для удаленного запуска с выбором параметров
 <a id="params"></a>

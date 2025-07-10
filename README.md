@@ -55,7 +55,11 @@ EMAIL - логин для авторизации \
 PASSWORD - пароль для авторизации
 
 <p align="center">  
-<img src="https://github.com/Morozovk/Api/blob/master/media/jenkins-job.png" width="950"/ alt="Jenkins-result"></a>  
+<img src="https://github.com/Morozovk/Api/blob/master/media/jenkins-job.png" width="950"/ alt="Jenkins-job"></a>  
+</p>
+
+<p align="center">  
+<img src="https://github.com/Morozovk/Api/blob/master/media/jenlins-job-parametr.png" width="950"/ alt="Jenkins-job-parametr"></a>  
 </p>
 
 <a id="console"></a>

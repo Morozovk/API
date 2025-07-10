@@ -6,7 +6,7 @@
 
 * <a href="#tools">Технологии и инструменты</a>
 
-* <a href="#cases">Автоматизированные тест кейсы</a>
+* <a href="#cases">Автоматизированные разделы сервиса</a>
 
 * <a href="#jenkins">Сборка в Jenkins</a>
 
@@ -52,7 +52,7 @@
 
 Task - Выбор списка тест кейсов \
 EMAIL - логин для авторизации \
-PASSWORD - пароль для авторизации \
+PASSWORD - пароль для авторизации
 
 <p align="center">  
 <img src="https://github.com/Morozovk/Api/blob/master/media/jenkins-job.png" width="950"/ alt="Jenkins-result"></a>  
@@ -61,7 +61,7 @@ PASSWORD - пароль для авторизации \
 <a id="console"></a>
 ### Команда для запуска из терминала:
 
->gradlew clean test
+>gradlew clean test \
  gradle clean LogIn_test \
  gradle clean Registration_test \
  gradle clean UserCard_test \
@@ -69,9 +69,9 @@ PASSWORD - пароль для авторизации \
 
 ### Удаленный запуск через Jenkins:
 
-> clean
-${Task}
--DEMAIL="${EMAIL}"
+> clean \
+${Task} \
+-DEMAIL="${EMAIL}" \
 -DPASSWORD="${PASSWORD}"
 
 ---

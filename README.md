@@ -104,5 +104,5 @@ ${Task} \
 - Реализован бот, который после каждого прохождения автотестов присылает уведомление с информацией по успешно пройденным или упавшим автотестам
 
 <p align="center">  
-<img src="" width="600"/ alt="Telegram-bot"></a>  
+<img src="https://github.com/Morozovk/Api/blob/master/media/telegram-bot.png" width="600"/ alt="Telegram-bot"></a>  
 </p>

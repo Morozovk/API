@@ -13,5 +13,5 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ListUserBodyModel {
     Integer page, per_page, total, total_pages;
-    UserBodyModel data;
+    List<UserBodyModel> data;
 }

@@ -1,6 +1,6 @@
 # Проект по автоматизации на сайт "[reqres.in](https://reqres.in)"
 
->  <a href="https://reqres.in" target="_blank"><img align="center" src="https://github.com/Morozovk/KDV_homework/blob/master/media/KDV-logo.png" width="75" height="40"></a> - Бесплатный ресурс для тестирования API
+>  <a href="https://reqres.in" target="_blank"><img align="center" src="https://github.com/Morozovk/Api/blob/master/media/reqres.in.png" width="75" height="40"></a> - Бесплатный ресурс для тестирования API
 ---
 ## Содержание:
 

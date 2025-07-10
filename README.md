@@ -47,17 +47,16 @@
 ### Сборка в [Jenkins](https://jenkins.autotests.cloud/view/034/job/034-Morozovk98-API/)
 
 - Реалиована джоба для удаленного запуска с выбором параметров
-<a id="params"></a>
-
-#### Параметры сборки Jenkins:
-
-Task - Выбор списка тест кейсов \
-EMAIL - логин для авторизации \
-PASSWORD - пароль для авторизации
 
 <p align="center">  
 <img src="https://github.com/Morozovk/Api/blob/master/media/jenkins-job.png" width="950"/ alt="Jenkins-job"></a>  
 </p>
+
+<a id="params"></a>
+#### Параметры сборки Jenkins:
+Task - Выбор списка тест кейсов \
+EMAIL - логин для авторизации \
+PASSWORD - пароль для авторизации
 
 <p align="center">  
 <img src="https://github.com/Morozovk/Api/blob/master/media/jenlins-job-parametr.png" width="950"/ alt="Jenkins-job-parametr"></a>  

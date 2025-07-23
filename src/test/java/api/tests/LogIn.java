@@ -15,9 +15,10 @@ import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("LogIn")
+@DisplayName("Проверки авторизации")
 public class LogIn extends TestBase {
 
-    @Tag("LogIn")
     @DisplayName("Авторизация с валидными данными")
     @Test
     void loginSuccessfulTest() {
@@ -41,7 +42,6 @@ public class LogIn extends TestBase {
         });
     }
 
-    @Tag("LogIn")
     @DisplayName("Попытка авторизации без пароля")
     @Test
     void loginUnSuccessfulNotPasswordTest() {
@@ -64,7 +64,6 @@ public class LogIn extends TestBase {
         });
     }
 
-    @Tag("LogIn")
     @DisplayName("Попытка авторизации без email")
     @Test
     void loginUnSuccessfulNotEmailTest() {
@@ -87,7 +86,6 @@ public class LogIn extends TestBase {
         });
     }
 
-    @Tag("LogIn")
     @DisplayName("Попытка авторизации с некорректным email")
     @Test
     void loginUnSuccessfulNotCorrectEmailTest() {
@@ -110,7 +108,6 @@ public class LogIn extends TestBase {
         });
     }
 
-    @Tag("LogIn")
     @DisplayName("Попытка авторизации с некорректным паролем")
     @Disabled ("В авторизации баг, можно ввести любой пароль")
     @Test

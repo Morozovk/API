@@ -16,9 +16,10 @@ import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("UserCard")
+@DisplayName("Проверка карточек пользователя")
 public class UserCard extends TestBase {
 
-    @Tag("UserCard")
     @DisplayName("Добавление рабочего места юзера в карточку пользователя")
     @Test
     void newEntryUserCardTest() {
@@ -46,7 +47,6 @@ public class UserCard extends TestBase {
         });
     }
 
-    @Tag("UserCard")
     @DisplayName("Изменение с помощью Put рабочего места юзера в карточку пользователя")
     @Test
     void updateJobInUserCardPutTest() {
@@ -72,7 +72,6 @@ public class UserCard extends TestBase {
         });
     }
 
-    @Tag("UserCard")
     @DisplayName("Изменение с помощью Patch рабочего места юзера в карточку пользователя")
     @Test
     void updateJobInUserCardPatchTest() {
@@ -98,7 +97,6 @@ public class UserCard extends TestBase {
         });
     }
 
-    @Tag("UserCard")
     @DisplayName("Изменение с помощью Put рабочего места юзера в карточку пользователя")
     @Test
     void updateNameInUserCardPutTest() {
@@ -124,7 +122,6 @@ public class UserCard extends TestBase {
         });
     }
 
-    @Tag("UserCard")
     @DisplayName("Изменение с помощью Patch рабочего места юзера в карточку пользователя")
     @Test
     void updateNameInUserCardPatchTest() {
@@ -150,7 +147,6 @@ public class UserCard extends TestBase {
         });
     }
 
-    @Tag("UserCard")
     @DisplayName("Удаление карточки юзера пользователя")
     @Test
     void deleteUserCardPatchTest() {

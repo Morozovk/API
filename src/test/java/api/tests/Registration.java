@@ -14,9 +14,10 @@ import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("Registration")
+@DisplayName("Проверка регистрации")
 public class Registration extends TestBase {
 
-    @Tag("Registration")
     @DisplayName("Регистрация пользователя")
     @Test
     void registerSuccessfulTest() {
@@ -42,7 +43,6 @@ public class Registration extends TestBase {
         });
     }
 
-    @Tag("Registration")
     @DisplayName("Регистрация с некорректным email")
     @Test
     void registerUnSuccessfulNotCorrectEmailTest() {
@@ -65,7 +65,6 @@ public class Registration extends TestBase {
         });
     }
 
-    @Tag("Registration")
     @DisplayName("Регистрация без обязательного поля email")
     @Test
     void registerUnSuccessfulNotEmailTest() {
@@ -88,7 +87,6 @@ public class Registration extends TestBase {
         });
     }
 
-    @Tag("Registration")
     @DisplayName("Регистрация без обязательного поля password")
     @Test
     void registerUnSuccessfulNotPasswordTest() {

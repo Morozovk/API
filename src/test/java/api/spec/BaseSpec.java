@@ -13,7 +13,7 @@ import static io.restassured.http.ContentType.JSON;
 public class BaseSpec {
     public static RequestSpecification requestBaseSpec = with()
             .filter(withCustomTemplates())
-            .log().uri()
+            .log().all()
             .contentType(JSON);
 
     public static ResponseSpecification baseResponseSpec(int statusCode) {

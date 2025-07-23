@@ -12,9 +12,10 @@ import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("Users")
+@DisplayName("Проверка страниц с юзерами")
 public class Users extends TestBase {
 
-    @Tag("Users")
     @DisplayName("Отображение страницы с юзерами")
     @Test
     void ListUsersTest() {
@@ -24,7 +25,8 @@ public class Users extends TestBase {
                         .header("x-api-key", apiKey)
 
                         .when()
-                        .get("/users?page=2")
+                        .queryParam("page", "2")
+                        .get("/users")
 
                         .then()
                         .spec(baseResponseSpec(200))
@@ -54,7 +56,8 @@ public class Users extends TestBase {
                         .header("x-api-key", apiKey)
 
                         .when()
-                        .get("/users?page=2")
+                        .queryParam("page", "2")
+                        .get("/users")
 
                         .then()
                         .spec(baseResponseSpec(200))
@@ -84,7 +87,8 @@ public class Users extends TestBase {
                         .header("x-api-key", apiKey)
 
                         .when()
-                        .get("/users/1")
+                        .queryParam("page", "1")
+                        .get("/users")
 
                         .then()
                         .spec(baseResponseSpec(200))

@@ -81,7 +81,7 @@ ${Task} \
 ---
 
 <a id="allure"></a>
-### Allure отчет
+### [Allure отчет](https://jenkins.autotests.cloud/view/034/job/034-Morozovk98-API/16/allure/)
 
 - Реализован Allure отчет
 

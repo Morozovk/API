@@ -1,4 +1,4 @@
-# Проект по автоматизации на сервис "[reqres.in](https://reqres.in)"
+# Проект по автоматизации на сервис [Reqres.in](https://reqres.in)
 
 >  <a href="https://reqres.in" target="_blank"><img align="center" src="https://github.com/Morozovk/Api/blob/master/media/reqres.in.png" width="75" height="40"></a> - Бесплатный ресурс для тестирования API
 ---

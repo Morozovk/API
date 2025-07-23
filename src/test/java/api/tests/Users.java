@@ -87,8 +87,7 @@ public class Users extends TestBase {
                         .header("x-api-key", apiKey)
 
                         .when()
-                        .queryParam("page", "1")
-                        .get("/users")
+                        .get("/users/2")
 
                         .then()
                         .spec(baseResponseSpec(200))

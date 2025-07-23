@@ -18,7 +18,7 @@ public class Users extends TestBase {
 
     @DisplayName("Отображение страницы с юзерами")
     @Test
-    void ListUsersTest() {
+    void listUsersTest() {
 
         ListUserBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -80,7 +80,7 @@ public class Users extends TestBase {
     @Tag("Users")
     @DisplayName("Отображение страницы с юзером")
     @Test
-    void ListSingleUserTest() {
+    void listSingleUserTest() {
 
         UserDataBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)

@@ -7,6 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class LogInRequestBodyModel {
+public class LogInAndRegistrationRequestBodyModel {
     String email, password;
 }

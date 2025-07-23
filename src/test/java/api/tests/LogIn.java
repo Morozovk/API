@@ -1,7 +1,7 @@
 package api.tests;
 
 import api.models.ErrorResponseBodyModel;
-import api.models.LogInRequestBodyModel;
+import api.models.LogInAndRegistrationRequestBodyModel;
 import api.models.LogInResponseBodyModel;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -22,7 +22,7 @@ public class LogIn extends TestBase {
     @DisplayName("Авторизация с валидными данными")
     @Test
     void loginSuccessfulTest() {
-        LogInRequestBodyModel authData = new LogInRequestBodyModel(EMAIL,PASSWORD);
+        LogInAndRegistrationRequestBodyModel authData = new LogInAndRegistrationRequestBodyModel(EMAIL,PASSWORD);
 
         LogInResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -45,7 +45,7 @@ public class LogIn extends TestBase {
     @DisplayName("Попытка авторизации без пароля")
     @Test
     void loginUnSuccessfulNotPasswordTest() {
-        LogInRequestBodyModel authData = new LogInRequestBodyModel(EMAIL,"");
+        LogInAndRegistrationRequestBodyModel authData = new LogInAndRegistrationRequestBodyModel(EMAIL,"");
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -67,7 +67,7 @@ public class LogIn extends TestBase {
     @DisplayName("Попытка авторизации без email")
     @Test
     void loginUnSuccessfulNotEmailTest() {
-        LogInRequestBodyModel authData = new LogInRequestBodyModel("", PASSWORD);
+        LogInAndRegistrationRequestBodyModel authData = new LogInAndRegistrationRequestBodyModel("", PASSWORD);
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -89,7 +89,8 @@ public class LogIn extends TestBase {
     @DisplayName("Попытка авторизации с некорректным email")
     @Test
     void loginUnSuccessfulNotCorrectEmailTest() {
-        LogInRequestBodyModel authData = new LogInRequestBodyModel("1234", PASSWORD);
+        LogInAndRegistrationRequestBodyModel authData =
+                new LogInAndRegistrationRequestBodyModel("1234", PASSWORD);
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -112,7 +113,8 @@ public class LogIn extends TestBase {
     @Disabled ("В авторизации баг, можно ввести любой пароль")
     @Test
     void loginUnSuccessfulNotCorrectPasswordTest() {
-        LogInRequestBodyModel authData = new LogInRequestBodyModel(EMAIL, "1234");
+        LogInAndRegistrationRequestBodyModel authData =
+                new LogInAndRegistrationRequestBodyModel(EMAIL, "1234");
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)

@@ -22,7 +22,7 @@ public class LogIn extends TestBase {
     @DisplayName("Авторизация с валидными данными")
     @Test
     void loginSuccessfulTest() {
-        LogInAndRegistrationRequestBodyModel authData = new LogInAndRegistrationRequestBodyModel(EMAIL,PASSWORD);
+        LogInAndRegistrationRequestBodyModel authData = new LogInAndRegistrationRequestBodyModel(email,password);
 
         LogInResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -45,7 +45,7 @@ public class LogIn extends TestBase {
     @DisplayName("Попытка авторизации без пароля")
     @Test
     void loginUnSuccessfulNotPasswordTest() {
-        LogInAndRegistrationRequestBodyModel authData = new LogInAndRegistrationRequestBodyModel(EMAIL,"");
+        LogInAndRegistrationRequestBodyModel authData = new LogInAndRegistrationRequestBodyModel(email,"");
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -67,7 +67,7 @@ public class LogIn extends TestBase {
     @DisplayName("Попытка авторизации без email")
     @Test
     void loginUnSuccessfulNotEmailTest() {
-        LogInAndRegistrationRequestBodyModel authData = new LogInAndRegistrationRequestBodyModel("", PASSWORD);
+        LogInAndRegistrationRequestBodyModel authData = new LogInAndRegistrationRequestBodyModel("", password);
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -90,7 +90,7 @@ public class LogIn extends TestBase {
     @Test
     void loginUnSuccessfulNotCorrectEmailTest() {
         LogInAndRegistrationRequestBodyModel authData =
-                new LogInAndRegistrationRequestBodyModel("1234", PASSWORD);
+                new LogInAndRegistrationRequestBodyModel("1234", password);
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -114,7 +114,7 @@ public class LogIn extends TestBase {
     @Test
     void loginUnSuccessfulNotCorrectPasswordTest() {
         LogInAndRegistrationRequestBodyModel authData =
-                new LogInAndRegistrationRequestBodyModel(EMAIL, "1234");
+                new LogInAndRegistrationRequestBodyModel(email, "1234");
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)

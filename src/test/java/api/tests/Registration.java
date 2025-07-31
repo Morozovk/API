@@ -21,7 +21,7 @@ public class Registration extends TestBase {
     @DisplayName("Регистрация пользователя")
     @Test
     void registerSuccessfulTest() {
-        LogInAndRegistrationRequestBodyModel registerData = new LogInAndRegistrationRequestBodyModel(EMAIL, PASSWORD);
+        LogInAndRegistrationRequestBodyModel registerData = new LogInAndRegistrationRequestBodyModel(email, password);
 
         RegisterResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -47,7 +47,7 @@ public class Registration extends TestBase {
     @Test
     void registerUnSuccessfulNotCorrectEmailTest() {
         LogInAndRegistrationRequestBodyModel registerData =
-                new LogInAndRegistrationRequestBodyModel("1234", PASSWORD);
+                new LogInAndRegistrationRequestBodyModel("1234", password);
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -70,7 +70,7 @@ public class Registration extends TestBase {
     @Test
     void registerUnSuccessfulNotEmailTest() {
         LogInAndRegistrationRequestBodyModel registerData =
-                new LogInAndRegistrationRequestBodyModel("", PASSWORD);
+                new LogInAndRegistrationRequestBodyModel("", password);
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
@@ -93,7 +93,7 @@ public class Registration extends TestBase {
     @Test
     void registerUnSuccessfulNotPasswordTest() {
         LogInAndRegistrationRequestBodyModel registerData =
-                new LogInAndRegistrationRequestBodyModel(EMAIL, "");
+                new LogInAndRegistrationRequestBodyModel(email, "");
 
         ErrorResponseBodyModel response = step("Отправляем запрос", () ->
                 given(requestBaseSpec)
